@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+   <div class="sidebar" th:fragment="sidebar">
+    <h3>📚 Biblioteca Virtual</h3>
+
+    <hr>
+
+    <h5>Descubra seu livro</h5>
+    <a th:href="@{/livros}">Página Principal</a>
+
+    <hr>
+
+    <h5>Seu acervo</h5>
+    <a th:href="@{/livros/novo}">Cadastrar Livro</a>
+    <a th:href="@{/livros/lista}">Lista de Livros</a>
+</div>
+
+</body>
+
+</html>

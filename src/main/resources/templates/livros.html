@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Livraria</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div th:replace="layout :: sidebar"></div>
+
+<div class="content">
+
+    <h1>Sugestões de Leitura</h1>
+
+    <div class="cards-container">
+
+        <div class="livro-card" th:each="livro : ${livros}">
+
+            <img th:if="${livro.imagem != null}"
+                 th:src="@{/imagens/{img}(img=${livro.imagem})}"
+                 alt="Capa do Livro">
+
+            <div class="livro-card-content">
+                <h3 th:text="${livro.titulo}"></h3>
+                <p><strong>Autor:</strong> <span th:text="${livro.autor}"></span></p>
+                <p><strong>Preço:</strong> R$ <span th:text="${livro.preco}"></span></p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

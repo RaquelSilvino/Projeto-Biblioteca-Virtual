@@ -1,0 +1,123 @@
+/* RESET */
+/* FUNDO DA PÁGINA PRINCIPAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* gradiente do vermelho claro no topo para branco embaixo */
+    background: linear-gradient(to bottom, #ffcccc, #ffffff);
+
+    /* garante que ocupe toda a tela */
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ff4d4d, #990000);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* CONTEÚDO */
+.content {
+    margin-left: 240px;
+    padding: 30px;
+    width: calc(100% - 240px);
+    box-sizing: border-box;
+}
+
+/* CONTAINER DOS CARDS */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px);
+    gap: 20px;
+    justify-content: start;
+}
+
+/* CARD DO LIVRO */
+.livro-card {
+    width: 220px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* IMAGEM */
+.livro-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+/* CONTEÚDO */
+.livro-card-content {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+/* ESTILO PARA TEXTO DOS CARDS */
+.livro-card-content h3 {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #b30000; /* vermelho escuro elegante */
+    text-align: center;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.livro-card-content p {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin: 3px 0;
+    color: #333;
+}
+
+.livro-card-content p strong {
+    color: #800000; /* vermelho escuro para Autor: e Preço: */
+}
+
+.livro-card-content p span {
+    color: #555;
+    font-weight: 500;
+}
+
+
+/* ESTILO DO TÍTULO PRINCIPAL */
+.content > h1 {
+    text-align: center; /* centraliza o título */
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #990000; /* vermelho forte */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* sombra suave */
+    margin-bottom: 30px; /* espaço abaixo do título */
+}
